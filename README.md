@@ -1,17 +1,17 @@
 # go-cover-view
 
 
-[![ci](https://github.com/johejo/go-cover-view/workflows/ci/badge.svg?branch=master)](https://github.com/johejo/go-cover-view/actions?query=workflow%3Aci)
+[![ci](https://github.com/saurabh-prakash/go-cover-view/workflows/ci/badge.svg?branch=master)](https://github.com/saurabh-prakash/go-cover-view/actions?query=workflow%3Aci)
 [![codecov](https://codecov.io/gh/johejo/go-cover-view/branch/master/graph/badge.svg)](https://codecov.io/gh/johejo/go-cover-view)
-[![Go Report Card](https://goreportcard.com/badge/github.com/johejo/go-cover-view)](https://goreportcard.com/report/github.com/johejo/go-cover-view)
+[![Go Report Card](https://goreportcard.com/badge/github.com/saurabh-prakash/go-cover-view)](https://goreportcard.com/report/github.com/saurabh-prakash/go-cover-view)
 
 simple go coverage report viewer
 
 ## Install
 
 ```
-go get github.com/johejo/go-cover-view
-go install github.com/johejo/go-cover-view
+go get github.com/saurabh-prakash/go-cover-view
+go install github.com/saurabh-prakash/go-cover-view
 ```
 
 ## Get Started
@@ -156,8 +156,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git fetch origin master
-          go get github.com/johejo/go-cover-view
-          go install github.com/johejo/go-cover-view
+          go get github.com/saurabh-prakash/go-cover-view
+          go install github.com/saurabh-prakash/go-cover-view
           go-cover-view -ci github-actions -git-diff-base origin/master
 ```
 

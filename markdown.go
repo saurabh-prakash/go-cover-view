@@ -16,6 +16,11 @@ import (
 	"golang.org/x/tools/cover"
 )
 
+const (
+	gitHubCommentCharLimit = 65536
+	toBeContdMsg           = "... to be contd."
+)
+
 var reportTmp = template.Must(template.New("report").Parse(`
 # go-cover-view
 
@@ -133,6 +138,9 @@ func upsertGitHubPullRequestComment(profiles []*cover.Profile, path string) erro
 		}
 	}
 	body := buf.String()
+	if len(body) > gitHubCommentCharLimit {
+		body = body[:gitHubCommentCharLimit-len(toBeContdMsg)] + toBeContdMsg
+	}
 	if commentID == 0 {
 		_, _, err := gc.Issues.CreateComment(ctx, owner, repo, pr.GetNumber(), &github.IssueComment{
 			Body: &body,

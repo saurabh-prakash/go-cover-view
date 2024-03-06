@@ -1,4 +1,4 @@
-module github.com/johejo/go-cover-view
+module github.com/saurabh-prakash/go-cover-view
 
 go 1.14
 

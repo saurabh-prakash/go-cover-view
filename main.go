@@ -137,7 +137,7 @@ func parseModfile() (_modfile, error) {
 }
 
 func getLines(profile *cover.Profile, module string) ([]string, error) {
-	// github.com/johejo/go-cover-view/main.go -> ./main.go
+	// github.com/saurabh-prakash/go-cover-view/main.go -> ./main.go
 	p := strings.ReplaceAll(profile.FileName, module, ".")
 	f, err := os.Open(p)
 	if err != nil {
