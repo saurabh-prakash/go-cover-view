@@ -180,7 +180,7 @@ func getLines(profile *cover.Profile, module string) ([]string, error) {
 		}
 		for i := block.StartLine - 1; i <= block.EndLine-1; i++ {
 			if i >= len(lines) {
-				return nil, fmt.Errorf("invalid line length: index=%d, len(lines)=%d", i, len(lines))
+				break
 			}
 			line := lines[i]
 			newLine := prefix + line[len(prefix):]
